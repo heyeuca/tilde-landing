@@ -1,0 +1,1 @@
+Tilde — a tiny, beautiful text editor for macOS

@@ -1,0 +1,17 @@
+name: tilde
+platform: macos
+minimum_os: "14.0"
+
+design:
+  chrome: minimal
+  typography: careful
+  theme: system
+
+window:
+  remember_size: true
+  restore_tabs: true
+
+features:
+  markdown: true
+  reader: true
+  plugins: false
