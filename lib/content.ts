@@ -7,6 +7,14 @@ export const SITE_URL = "https://tilde.example.com";
 
 export type Lang = "en" | "ko" | "ja" | "zh";
 
+// Home path for each locale (trailingSlash-consistent).
+export const LANG_HOME: Record<Lang, string> = {
+  en: "/",
+  ko: "/ko/",
+  ja: "/ja/",
+  zh: "/zh/",
+};
+
 export interface Content {
   nav: {
     github: string;

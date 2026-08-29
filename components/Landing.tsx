@@ -1,9 +1,11 @@
+import LangLink from "@/components/LangLink";
 import ShowcaseTabs from "@/components/ShowcaseTabs";
 import TildeMark from "@/components/TildeMark";
 import {
   content,
   DOWNLOAD_URL,
   GITHUB_URL,
+  LANG_HOME,
   LICENSE_URL,
   type Lang,
 } from "@/lib/content";
@@ -14,24 +16,10 @@ export default function Landing({ lang }: { lang: Lang }) {
   return (
     <>
       <header className="nav">
-        <a className="nav-brand" href={lang === "en" ? "/" : "/ko/"}>
+        <a className="nav-brand" href={LANG_HOME[lang]}>
           <TildeMark className="nav-tilde" />
           Tilde
         </a>
-        <nav className="nav-links">
-          <a href={GITHUB_URL}>{t.nav.github}</a>
-          {t.nav.otherLangs.map((l) => (
-            <a
-              key={l.hreflang}
-              href={l.href}
-              hrefLang={l.hreflang}
-              lang={l.hreflang}
-              rel="alternate"
-            >
-              {l.label}
-            </a>
-          ))}
-        </nav>
       </header>
 
       <main>
@@ -124,14 +112,9 @@ export default function Landing({ lang }: { lang: Lang }) {
           {t.nav.otherLangs.map((l) => (
             <span key={l.hreflang}>
               <span aria-hidden="true"> · </span>
-              <a
-                href={l.href}
-                hrefLang={l.hreflang}
-                lang={l.hreflang}
-                rel="alternate"
-              >
+              <LangLink href={l.href} hreflang={l.hreflang}>
                 {l.label}
-              </a>
+              </LangLink>
             </span>
           ))}
         </p>

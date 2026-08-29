@@ -112,22 +112,6 @@ a {
   display: block;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.75rem;
-}
-
-.nav-links a {
-  font-size: 0.9375rem;
-  color: var(--fg-secondary);
-  text-decoration: none;
-  transition: color 120ms ease;
-}
-
-.nav-links a:hover {
-  color: var(--fg);
-}
-
 /* ---- Hero ---- */
 
 .hero {
