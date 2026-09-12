@@ -42,7 +42,8 @@ export default function ShowcaseTabs({
         id="showcase-panel"
         aria-labelledby={`showcase-tab-${item.id}`}
       >
-        <picture key={item.id}>
+        <div className="showcase-viewport">
+          <picture key={item.id}>
           <source
             srcSet={`/app-${item.id}-dark.png`}
             media="(prefers-color-scheme: dark)"
@@ -54,7 +55,8 @@ export default function ShowcaseTabs({
             height={1120}
             alt={item.alt}
           />
-        </picture>
+          </picture>
+        </div>
       </div>
       <div
         role="tablist"

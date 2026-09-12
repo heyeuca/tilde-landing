@@ -137,7 +137,7 @@ a {
   width: 4.75rem;
   height: auto;
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.25rem;
 }
 
 .hero h1 {
@@ -170,8 +170,17 @@ a {
   color: var(--fg-secondary);
 }
 
-.hero-appstore {
-  margin-top: 0.25rem;
+/* On phones the line wraps anyway, so break before the note instead of
+   leaving a separator dangling at the end of a line. */
+@media (max-width: 640px) {
+  .hero-fineprint-note {
+    display: block;
+    margin-top: 0.25rem;
+  }
+
+  .hero-fineprint-dot {
+    display: none;
+  }
 }
 
 
@@ -179,12 +188,8 @@ a {
 
 .brew {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 2rem;
-  font-size: 0.8125rem;
-  color: var(--fg-secondary);
+  justify-content: center;
+  margin-top: 1.75rem;
 }
 
 .brew-line {
@@ -282,6 +287,25 @@ a {
   filter: var(--shot-shadow);
 }
 
+/* On phones the whole window would shrink to an unreadable thumbnail, so
+   let the capture keep a legible width and scroll sideways instead. */
+@media (max-width: 640px) {
+  .showcase-viewport {
+    overflow-x: auto;
+    margin: 0 -1.5rem;
+    padding: 0 1.5rem 2.75rem;
+    scrollbar-width: none;
+  }
+
+  .showcase-viewport::-webkit-scrollbar {
+    display: none;
+  }
+
+  .showcase-shot {
+    min-width: 40rem;
+  }
+}
+
 .showcase-tabs {
   display: flex;
   flex-wrap: wrap;
@@ -329,42 +353,66 @@ section {
 
 /* ---- Values ---- */
 
+/* Five words under the screenshot, read like a caption. */
 .values {
-  margin-top: 8.5rem;
+  margin-top: 3.5rem;
   text-align: center;
 }
 
-.values ul {
+.values-list {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 2.25rem;
-}
-
-.value-name {
-  font-size: 1.0625rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-}
-
-.value-line {
-  margin-top: 0.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0;
   font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.005em;
   color: var(--fg-secondary);
+}
+
+.values-list li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.75rem;
+  color: var(--fg-tertiary);
+}
+
+/* Wraps to two lines on phones; drop the dots rather than dangle one. */
+@media (max-width: 640px) {
+  .values-list {
+    gap: 0.35rem 1.25rem;
+  }
+
+  .values-list li:not(:last-child)::after {
+    content: none;
+  }
 }
 
 /* ---- Features ---- */
 
 .features {
   max-width: 52rem;
-  margin: 8.5rem auto 0;
+  margin: 9rem auto 0;
+}
+
+.features .section-heading {
+  text-align: left;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.75rem 3.5rem;
-  margin-top: 3.5rem;
+  margin-top: 3rem;
+}
+
+.features-also {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--hairline);
+  font-size: 0.9375rem;
+  color: var(--fg-secondary);
+  text-wrap: pretty;
 }
 
 .feature h3 {
@@ -389,22 +437,24 @@ section {
 
 /* ---- Non-goals ---- */
 
+/* The page's one set piece: more air, larger type, nothing else around it. */
 .nongoals {
-  margin-top: 8.5rem;
+  margin-top: 12rem;
   text-align: center;
 }
 
 .nongoals-list {
   list-style: none;
-  margin-top: 2.5rem;
+  margin-top: 3.25rem;
   font-family: var(--font-mono);
-  font-size: 0.9375rem;
-  line-height: 2.3;
+  font-size: clamp(1.0625rem, 0.95rem + 0.5vw, 1.3125rem);
+  line-height: 2.2;
+  letter-spacing: -0.01em;
 }
 
 .nongoals-closing {
   max-width: 30rem;
-  margin: 2.5rem auto 0;
+  margin: 3.25rem auto 0;
   font-size: 0.9375rem;
   color: var(--fg-secondary);
   text-wrap: pretty;
@@ -413,17 +463,20 @@ section {
 /* ---- Privacy ---- */
 
 .privacy {
-  margin-top: 8.5rem;
-  text-align: center;
+  max-width: 52rem;
+  margin: 12rem auto 0;
+}
+
+.privacy .section-heading {
+  text-align: left;
 }
 
 .privacy-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.4rem 0;
-  margin-top: 2rem;
+  margin-top: 1.75rem;
   font-size: 0.9375rem;
   color: var(--fg-secondary);
 }
@@ -447,15 +500,14 @@ section {
 }
 
 .privacy-closing {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   font-size: 0.9375rem;
-  font-weight: 600;
 }
 
 /* ---- Outro ---- */
 
 .outro {
-  margin: 10rem 0 9rem;
+  margin: 11rem 0 6.5rem;
   text-align: center;
 }
 

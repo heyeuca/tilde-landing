@@ -36,15 +36,19 @@ export default function Landing({ lang }: { lang: Lang }) {
           <div className="hero-actions">
             <DownloadActions hero={t.hero} />
           </div>
-          <p className="hero-fineprint">{t.hero.fineprint}</p>
-          {!APP_STORE_URL && (
-            <p className="hero-fineprint hero-appstore">
-              {t.hero.appStoreNote}
-            </p>
-          )}
+          <p className="hero-fineprint">
+            {t.hero.fineprint}
+            {!APP_STORE_URL && (
+              <span className="hero-fineprint-note">
+                <span aria-hidden="true" className="hero-fineprint-dot">
+                  {" · "}
+                </span>
+                {t.hero.appStoreNote}
+              </span>
+            )}
+          </p>
           <BrewCommand
             command={BREW_COMMAND}
-            label={t.hero.brewLabel}
             copyLabel={t.hero.copy}
             copiedLabel={t.hero.copied}
           />
@@ -62,11 +66,10 @@ export default function Landing({ lang }: { lang: Lang }) {
           <h2 id="values-heading" className="sr-only">
             {t.values.heading}
           </h2>
-          <ul>
+          <ul className="values-list">
             {t.values.items.map((v) => (
-              <li key={v.name}>
-                <p className="value-name">{v.name}</p>
-                <p className="value-line">{v.line}</p>
+              <li key={v.name} title={v.line}>
+                {v.name}
               </li>
             ))}
           </ul>
@@ -82,6 +85,7 @@ export default function Landing({ lang }: { lang: Lang }) {
               </div>
             ))}
           </div>
+          <p className="features-also">{t.features.also}</p>
         </section>
 
         <section className="nongoals">

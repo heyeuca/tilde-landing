@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 
 export default function BrewCommand({
   command,
-  label,
   copyLabel,
   copiedLabel,
 }: {
   command: string;
-  label: string;
   copyLabel: string;
   copiedLabel: string;
 }) {
@@ -49,7 +47,6 @@ export default function BrewCommand({
 
   return (
     <div className="brew">
-      <span className="brew-label">{label}</span>
       <span className="brew-line">
         <code className="brew-code">{command}</code>
         <button

@@ -37,7 +37,6 @@ export interface Content {
     appStore: string;
     fineprint: string;
     appStoreNote: string;
-    brewLabel: string;
     copy: string;
     copied: string;
   };
@@ -53,6 +52,8 @@ export interface Content {
   features: {
     heading: string;
     items: { title: string; body: string }[];
+    /** Small-print line under the grid for the table-stakes features. */
+    also: string;
   };
   nonGoals: {
     heading: string;
@@ -89,12 +90,11 @@ export const content: Record<Lang, Content> = {
     hero: {
       title: "A tiny, beautiful text editor for macOS.",
       subtitle:
-        "Open the file. Read it. Maybe change a line. Close it. No projects, no plugins, no sidebars — the editor disappears, and the content is all that's left.",
+        "Open the file. Read it. Maybe change a line. Close it. No projects, no plugins, no sidebars. The editor disappears, and the content is all that's left.",
       download: "Download .dmg",
       appStore: "Get on the App Store",
       fineprint: "Free & open source · MIT License · macOS 14+",
       appStoreNote: "Coming soon to the App Store",
-      brewLabel: "Or install with Homebrew",
       copy: "Copy",
       copied: "Copied",
     },
@@ -124,7 +124,7 @@ export const content: Record<Lang, Content> = {
         },
         {
           id: "cjk",
-          label: "CJK",
+          label: "Any language",
           alt: "A note mixing Japanese, Korean, and Chinese verse in one Tilde window — any Unicode text renders naturally",
         },
       ],
@@ -144,15 +144,15 @@ export const content: Record<Lang, Content> = {
       items: [
         {
           title: "Markdown, done lightly",
-          body: "Headings render larger, bold renders bold — while the syntax stays visible. Tilde doesn't hide Markdown; it makes Markdown easier to read.",
+          body: "Headings render larger, bold renders bold, while the syntax stays visible. Tilde doesn't hide Markdown; it makes Markdown easier to read.",
         },
         {
           title: "Reader mode",
-          body: "One keystroke — ⌘⇧R — renders the whole document, tables and highlighted code blocks included, read-only. Toggle it from the title bar, like Safari's Reader.",
+          body: "One keystroke, ⌘⇧R, renders the whole document, tables and highlighted code blocks included, read-only. Toggle it from the title bar, like Safari's Reader.",
         },
         {
           title: "Any plain text",
-          body: ".txt and .md first, but .json, .yaml, .toml, .xml, .csv, .log, .env and most UTF-based text files open too — all as plain text.",
+          body: ".txt and .md first, but .json, .yaml, .toml, .xml, .csv, .log, .env and most UTF-based text files open too, all as plain text.",
         },
         {
           title: "Quiet highlighting",
@@ -160,21 +160,15 @@ export const content: Record<Lang, Content> = {
         },
         {
           title: "One file, one window",
-          body: "A true document-based Mac app: Open With, Autosave, Versions, Recent Documents, window tabs — all standard, none reinvented.",
+          body: "A true document-based Mac app: Open With, Autosave, Versions, Recent Documents, window tabs. All standard, none reinvented.",
         },
         {
           title: "Fast, then silent",
           body: "Launches fast, and idle CPU usage is effectively zero. No background work, no indexing, no polling. Ever.",
         },
-        {
-          title: "Light and dark",
-          body: "Light, dark, or follow the system — using macOS semantic colors. There is no theme system to manage.",
-        },
-        {
-          title: "Everything you expect",
-          body: "Undo, Find & Replace, spell check, drag-and-drop, word wrap, and optional line numbers.",
-        },
       ],
+      also:
+        "Also: undo, Find & Replace, spell check, drag-and-drop, word wrap, optional line numbers, and light or dark along with the system.",
     },
     nonGoals: {
       heading: "What Tilde won't do.",
@@ -189,7 +183,7 @@ export const content: Record<Lang, Content> = {
         "No AI.",
       ],
       closing:
-        "Tilde isn't a smaller IDE. If you need those things, Tilde is — intentionally — the wrong tool.",
+        "Tilde isn't a smaller IDE. If you need those things, Tilde is intentionally the wrong tool.",
     },
     privacy: {
       heading: "Your text stays yours.",
@@ -229,7 +223,6 @@ export const content: Record<Lang, Content> = {
       appStore: "App Store에서 받기",
       fineprint: "무료 오픈소스 · MIT License · macOS 14+",
       appStoreNote: "App Store 출시 예정",
-      brewLabel: "또는 Homebrew로 설치",
       copy: "복사",
       copied: "복사됨",
     },
@@ -259,7 +252,7 @@ export const content: Record<Lang, Content> = {
         },
         {
           id: "cjk",
-          label: "CJK",
+          label: "모든 언어",
           alt: "일본어·한국어·중국어 시가 한 창에 담긴 메모 — 어떤 유니코드 텍스트든 자연스럽게 열립니다",
         },
       ],
@@ -301,15 +294,9 @@ export const content: Record<Lang, Content> = {
           title: "빠르게, 그리고 조용히",
           body: "빠르게 실행되고, 유휴 상태의 CPU 사용량은 사실상 0입니다. 백그라운드 작업도, 인덱싱도, 폴링도 없습니다.",
         },
-        {
-          title: "라이트와 다크",
-          body: "라이트, 다크, 또는 시스템 그대로 — macOS 시맨틱 컬러를 사용합니다. 관리할 테마 시스템이 없습니다.",
-        },
-        {
-          title: "기대하는 모든 것",
-          body: "실행 취소, 찾기 및 바꾸기, 맞춤법 검사, 드래그 앤 드롭, 자동 줄 바꿈, 그리고 선택적 줄 번호.",
-        },
       ],
+      also:
+        "그리고: 실행 취소, 찾기 및 바꾸기, 맞춤법 검사, 드래그 앤 드롭, 자동 줄 바꿈, 선택적 줄 번호, 시스템을 따르는 라이트와 다크.",
     },
     nonGoals: {
       heading: "Tilde가 하지 않는 것.",
@@ -364,7 +351,6 @@ export const content: Record<Lang, Content> = {
       appStore: "App Storeで入手",
       fineprint: "無料・オープンソース · MIT License · macOS 14+",
       appStoreNote: "App Storeにも近日登場",
-      brewLabel: "またはHomebrewでインストール",
       copy: "コピー",
       copied: "コピーしました",
     },
@@ -394,7 +380,7 @@ export const content: Record<Lang, Content> = {
         },
         {
           id: "cjk",
-          label: "CJK",
+          label: "あらゆる言語",
           alt: "中国語・日本語・韓国語の詩がひとつのウインドウに並ぶノート — どんなUnicodeテキストもそのまま開けます",
         },
       ],
@@ -436,15 +422,9 @@ export const content: Record<Lang, Content> = {
           title: "速く、そして静かに",
           body: "起動は速く、待機中のCPU使用は実質ゼロ。バックグラウンド処理も、インデックス作成も、ポーリングもありません。",
         },
-        {
-          title: "ライトとダーク",
-          body: "ライト、ダーク、またはシステムに合わせて — macOSのセマンティックカラーを使います。管理するテーマシステムはありません。",
-        },
-        {
-          title: "期待どおりの基本",
-          body: "取り消す、検索と置換、スペルチェック、ドラッグ&ドロップ、行の折り返し。行番号は、必要なときだけ。",
-        },
       ],
+      also:
+        "そのほか: 取り消す、検索と置換、スペルチェック、ドラッグ&ドロップ、行の折り返し、必要なときだけの行番号、システムに合わせたライトとダーク。",
     },
     nonGoals: {
       heading: "Tildeがしないこと。",
@@ -499,7 +479,6 @@ export const content: Record<Lang, Content> = {
       appStore: "在 App Store 获取",
       fineprint: "免费开源 · MIT License · macOS 14+",
       appStoreNote: "即将登陆 App Store",
-      brewLabel: "或使用 Homebrew 安装",
       copy: "复制",
       copied: "已复制",
     },
@@ -529,7 +508,7 @@ export const content: Record<Lang, Content> = {
         },
         {
           id: "cjk",
-          label: "CJK",
+          label: "任何语言",
           alt: "中日韩三种文字的诗句同在一个窗口——任何 Unicode 文本都能原样打开",
         },
       ],
@@ -571,15 +550,9 @@ export const content: Record<Lang, Content> = {
           title: "快，然后安静",
           body: "启动飞快，闲置时 CPU 占用几乎为零。没有后台任务，没有索引，没有轮询。",
         },
-        {
-          title: "浅色与深色",
-          body: "浅色、深色，或跟随系统——使用 macOS 语义色。没有需要打理的主题系统。",
-        },
-        {
-          title: "该有的都有",
-          body: "撤销、查找与替换、拼写检查、拖放、自动换行，以及可选的行号。",
-        },
       ],
+      also:
+        "此外：撤销、查找与替换、拼写检查、拖放、自动换行、可选的行号，以及跟随系统的浅色与深色。",
     },
     nonGoals: {
       heading: "Tilde 不做的事。",
