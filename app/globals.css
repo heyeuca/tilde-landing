@@ -112,6 +112,18 @@ a {
   display: block;
 }
 
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--fg-secondary);
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.nav-link:hover {
+  color: var(--fg);
+}
+
 /* ---- Hero ---- */
 
 .hero {
@@ -160,6 +172,66 @@ a {
 
 .hero-appstore {
   margin-top: 0.25rem;
+}
+
+
+/* ---- Homebrew one-liner ---- */
+
+.brew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-size: 0.8125rem;
+  color: var(--fg-secondary);
+}
+
+.brew-line {
+  display: inline-flex;
+  align-items: stretch;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.brew-code {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--fg);
+  text-align: left;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+.brew-copy {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--fg-secondary);
+  background: var(--button-secondary-hover);
+  border: none;
+  border-left: 1px solid var(--hairline);
+  padding: 0 0.75rem;
+  cursor: pointer;
+  transition: color 120ms ease, background 120ms ease;
+}
+
+.brew-copy-icon {
+  display: block;
+}
+
+.brew-copy:hover {
+  color: var(--fg);
 }
 
 /* ---- Buttons ---- */
@@ -393,7 +465,9 @@ section {
   letter-spacing: -0.025em;
 }
 
-.outro .button {
+.outro-actions {
+  display: flex;
+  justify-content: center;
   margin-top: 2.25rem;
 }
 

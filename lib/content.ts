@@ -1,5 +1,15 @@
 export const GITHUB_URL = "https://github.com/heyeuca/Tilde";
-export const DOWNLOAD_URL = "https://github.com/heyeuca/Tilde/releases";
+// Stable "latest release" asset. The Tilde release workflow attaches the DMG
+// twice: versioned (Tilde-vX.Y.Z.dmg, used by the Homebrew cask) and as a
+// fixed-name copy so this link never has to change.
+export const DOWNLOAD_URL =
+  "https://github.com/heyeuca/Tilde/releases/latest/download/Tilde.dmg";
+export const RELEASES_URL = "https://github.com/heyeuca/Tilde/releases";
+// Empty until App Review approves the app; the hero shows the "coming soon"
+// note instead of the badge while this is blank. Fill in the
+// https://apps.apple.com/app/... URL from App Store Connect when live.
+export const APP_STORE_URL = "";
+export const BREW_COMMAND = "brew install heyeuca/tap/tilde";
 export const LICENSE_URL = "https://github.com/heyeuca/Tilde/blob/main/LICENSE";
 
 // TODO: replace with the real production domain before deploying.
@@ -24,9 +34,12 @@ export interface Content {
     title: string;
     subtitle: string;
     download: string;
-    viewSource: string;
+    appStore: string;
     fineprint: string;
     appStoreNote: string;
+    brewLabel: string;
+    copy: string;
+    copied: string;
   };
   showcase: {
     ariaLabel: string;
@@ -77,10 +90,13 @@ export const content: Record<Lang, Content> = {
       title: "A tiny, beautiful text editor for macOS.",
       subtitle:
         "Open the file. Read it. Maybe change a line. Close it. No projects, no plugins, no sidebars — the editor disappears, and the content is all that's left.",
-      download: "Download for macOS",
-      viewSource: "View on GitHub",
+      download: "Download .dmg",
+      appStore: "Get on the App Store",
       fineprint: "Free & open source · MIT License · macOS 14+",
-      appStoreNote: "Coming soon to the Mac App Store",
+      appStoreNote: "Coming soon to the App Store",
+      brewLabel: "Or install with Homebrew",
+      copy: "Copy",
+      copied: "Copied",
     },
     showcase: {
       ariaLabel: "Tilde screenshots",
@@ -187,7 +203,7 @@ export const content: Record<Lang, Content> = {
     },
     outro: {
       line: "Just open the file.",
-      download: "Download for macOS",
+      download: "Download .dmg",
     },
     footer: {
       license: "Tilde is free, open-source software released under the",
@@ -209,10 +225,13 @@ export const content: Record<Lang, Content> = {
       title: "macOS를 위한 작고 아름다운 텍스트 에디터.",
       subtitle:
         "파일을 열고, 읽고, 필요하면 한 줄 고치고, 닫는다. 프로젝트도, 플러그인도, 사이드바도 없이 — 에디터는 사라지고 내용만 남습니다.",
-      download: "macOS용 다운로드",
-      viewSource: "GitHub에서 보기",
+      download: ".dmg 다운로드",
+      appStore: "App Store에서 받기",
       fineprint: "무료 오픈소스 · MIT License · macOS 14+",
-      appStoreNote: "Mac App Store 출시 예정",
+      appStoreNote: "App Store 출시 예정",
+      brewLabel: "또는 Homebrew로 설치",
+      copy: "복사",
+      copied: "복사됨",
     },
     showcase: {
       ariaLabel: "Tilde 스크린샷",
@@ -319,7 +338,7 @@ export const content: Record<Lang, Content> = {
     },
     outro: {
       line: "그냥 파일을 여세요.",
-      download: "macOS용 다운로드",
+      download: ".dmg 다운로드",
     },
     footer: {
       license: "Tilde는",
@@ -341,10 +360,13 @@ export const content: Record<Lang, Content> = {
       title: "macOSのための、小さくて美しいテキストエディタ。",
       subtitle:
         "ファイルを開く。読む。必要なら一行だけ直して、閉じる。プロジェクトも、プラグインも、サイドバーもなし — エディタは消えて、内容だけが残ります。",
-      download: "macOS版をダウンロード",
-      viewSource: "GitHubで見る",
+      download: ".dmgをダウンロード",
+      appStore: "App Storeで入手",
       fineprint: "無料・オープンソース · MIT License · macOS 14+",
-      appStoreNote: "Mac App Storeにも近日登場",
+      appStoreNote: "App Storeにも近日登場",
+      brewLabel: "またはHomebrewでインストール",
+      copy: "コピー",
+      copied: "コピーしました",
     },
     showcase: {
       ariaLabel: "Tildeのスクリーンショット",
@@ -451,7 +473,7 @@ export const content: Record<Lang, Content> = {
     },
     outro: {
       line: "ただ、ファイルを開くだけ。",
-      download: "macOS版をダウンロード",
+      download: ".dmgをダウンロード",
     },
     footer: {
       license: "Tildeは",
@@ -473,10 +495,13 @@ export const content: Record<Lang, Content> = {
       title: "一款小而美的 macOS 文本编辑器。",
       subtitle:
         "打开文件。读一读。需要的话改一行，然后关掉。没有项目，没有插件，没有边栏——编辑器隐去，只留下内容。",
-      download: "下载 macOS 版",
-      viewSource: "在 GitHub 上查看",
+      download: "下载 .dmg",
+      appStore: "在 App Store 获取",
       fineprint: "免费开源 · MIT License · macOS 14+",
-      appStoreNote: "即将登陆 Mac App Store",
+      appStoreNote: "即将登陆 App Store",
+      brewLabel: "或使用 Homebrew 安装",
+      copy: "复制",
+      copied: "已复制",
     },
     showcase: {
       ariaLabel: "Tilde 截图",
@@ -578,7 +603,7 @@ export const content: Record<Lang, Content> = {
     },
     outro: {
       line: "打开文件，就好。",
-      download: "下载 macOS 版",
+      download: "下载 .dmg",
     },
     footer: {
       license: "Tilde 是基于",

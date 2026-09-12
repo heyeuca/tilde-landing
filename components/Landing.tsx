@@ -1,9 +1,12 @@
+import BrewCommand from "@/components/BrewCommand";
+import DownloadActions from "@/components/DownloadActions";
 import LangLink from "@/components/LangLink";
 import ShowcaseTabs from "@/components/ShowcaseTabs";
 import TildeMark from "@/components/TildeMark";
 import {
+  APP_STORE_URL,
+  BREW_COMMAND,
   content,
-  DOWNLOAD_URL,
   GITHUB_URL,
   LANG_HOME,
   LICENSE_URL,
@@ -20,6 +23,9 @@ export default function Landing({ lang }: { lang: Lang }) {
           <TildeMark className="nav-tilde" />
           Tilde
         </a>
+        <a className="nav-link" href={GITHUB_URL}>
+          {t.nav.github}
+        </a>
       </header>
 
       <main>
@@ -28,15 +34,20 @@ export default function Landing({ lang }: { lang: Lang }) {
           <h1>{t.hero.title}</h1>
           <p className="hero-subtitle">{t.hero.subtitle}</p>
           <div className="hero-actions">
-            <a className="button button-primary" href={DOWNLOAD_URL}>
-              {t.hero.download}
-            </a>
-            <a className="button button-secondary" href={GITHUB_URL}>
-              {t.hero.viewSource}
-            </a>
+            <DownloadActions hero={t.hero} />
           </div>
           <p className="hero-fineprint">{t.hero.fineprint}</p>
-          <p className="hero-fineprint hero-appstore">{t.hero.appStoreNote}</p>
+          {!APP_STORE_URL && (
+            <p className="hero-fineprint hero-appstore">
+              {t.hero.appStoreNote}
+            </p>
+          )}
+          <BrewCommand
+            command={BREW_COMMAND}
+            label={t.hero.brewLabel}
+            copyLabel={t.hero.copy}
+            copiedLabel={t.hero.copied}
+          />
         </section>
 
         <section className="showcase">
@@ -95,9 +106,12 @@ export default function Landing({ lang }: { lang: Lang }) {
 
         <section className="outro">
           <p className="outro-line">{t.outro.line}</p>
-          <a className="button button-primary" href={DOWNLOAD_URL}>
-            {t.outro.download}
-          </a>
+          <div className="outro-actions">
+            <DownloadActions
+              hero={{ ...t.hero, download: t.outro.download }}
+              primaryOnly
+            />
+          </div>
         </section>
       </main>
 
