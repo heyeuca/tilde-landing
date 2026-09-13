@@ -278,6 +278,22 @@ a {
   padding: 0 1.5rem;
 }
 
+/* All captures share one grid cell; the active one fades in over the
+   others. */
+.showcase-stack {
+  display: grid;
+}
+
+.showcase-frame {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 280ms ease-out;
+}
+
+.showcase-frame[data-active] {
+  opacity: 1;
+}
+
 /* Real app-window captures (transparent rounded corners baked in), so the
    shadow follows the alpha channel instead of a rectangular box. */
 .showcase-shot {
@@ -307,6 +323,7 @@ a {
 }
 
 .showcase-tabs {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -314,7 +331,23 @@ a {
   margin-top: 1.75rem;
 }
 
+/* The single selection pill that slides between tabs. */
+.showcase-tab-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100px;
+  background: var(--button-secondary-hover);
+  pointer-events: none;
+}
+
+.showcase-tab-indicator[data-settled] {
+  transition: transform 220ms cubic-bezier(0.2, 0, 0, 1),
+    width 220ms cubic-bezier(0.2, 0, 0, 1);
+}
+
 .showcase-tab {
+  position: relative;
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 500;
@@ -334,7 +367,13 @@ a {
 
 .showcase-tab[aria-selected="true"] {
   color: var(--fg);
-  background: var(--button-secondary-hover);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-frame,
+  .showcase-tab-indicator[data-settled] {
+    transition: none;
+  }
 }
 
 /* ---- Sections ---- */
