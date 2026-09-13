@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "ファイルを開いて、読んで、必要なら一行直して、閉じる。プロジェクトもプラグインもサイドバーもない超軽量テキストエディタ。無料・オープンソース、macOS 14+。",
   alternates: {
     canonical: "/ja/",
-    languages: { en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
+    languages: { "x-default": "/", en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
   },
   openGraph: {
     title: "Tilde — macOSのための小さくて美しいテキストエディタ",

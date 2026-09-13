@@ -12,8 +12,7 @@ export const APP_STORE_URL = "https://apps.apple.com/app/id6808973955";
 export const BREW_COMMAND = "brew install heyeuca/tap/tilde";
 export const LICENSE_URL = "https://github.com/heyeuca/Tilde/blob/main/LICENSE";
 
-// TODO: replace with the real production domain before deploying.
-export const SITE_URL = "https://tilde.example.com";
+export const SITE_URL = "https://tilde.euca.co";
 
 export type Lang = "en" | "ko" | "ja" | "zh";
 

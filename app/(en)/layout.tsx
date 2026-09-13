@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Open the file. Read it. Maybe change a line. Close it. No projects, no plugins, no sidebars. Free and open source, for macOS 14+.",
   alternates: {
     canonical: "/",
-    languages: { en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
+    languages: { "x-default": "/", en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
   },
   openGraph: {
     title: "Tilde — A tiny, beautiful text editor for macOS",

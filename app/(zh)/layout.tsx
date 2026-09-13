@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "打开文件，读一读，需要的话改一行，然后关掉。没有项目、没有插件、没有边栏的超轻量文本编辑器。免费开源，macOS 14+。",
   alternates: {
     canonical: "/zh/",
-    languages: { en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
+    languages: { "x-default": "/", en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
   },
   openGraph: {
     title: "Tilde — 一款小而美的 macOS 文本编辑器",

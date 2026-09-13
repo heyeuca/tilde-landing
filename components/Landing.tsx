@@ -1,5 +1,6 @@
 import BrewCommand from "@/components/BrewCommand";
 import DownloadActions from "@/components/DownloadActions";
+import JsonLd from "@/components/JsonLd";
 import LangLink from "@/components/LangLink";
 import ShowcaseTabs from "@/components/ShowcaseTabs";
 import TildeMark from "@/components/TildeMark";
@@ -18,6 +19,7 @@ export default function Landing({ lang }: { lang: Lang }) {
 
   return (
     <>
+      <JsonLd lang={lang} />
       <header className="nav">
         <a className="nav-brand" href={LANG_HOME[lang]}>
           <TildeMark className="nav-tilde" />
