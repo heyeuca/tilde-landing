@@ -62,18 +62,6 @@ export default function Landing({ lang }: { lang: Lang }) {
           />
         </section>
 
-        <section className="values" aria-labelledby="values-heading">
-          <h2 id="values-heading" className="sr-only">
-            {t.values.heading}
-          </h2>
-          <ul className="values-list">
-            {t.values.items.map((v) => (
-              <li key={v.name} title={v.line}>
-                {v.name}
-              </li>
-            ))}
-          </ul>
-        </section>
 
         <section className="features">
           <h2 className="section-heading">{t.features.heading}</h2>

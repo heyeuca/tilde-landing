@@ -45,10 +45,6 @@ export interface Content {
     defaultId: string;
     items: { id: string; label: string; alt: string }[];
   };
-  values: {
-    heading: string;
-    items: { name: string; line: string }[];
-  };
   features: {
     heading: string;
     items: { title: string; body: string }[];
@@ -127,16 +123,6 @@ export const content: Record<Lang, Content> = {
           label: "Any language",
           alt: "A note mixing Japanese, Korean, and Chinese verse in one Tilde window — any Unicode text renders naturally",
         },
-      ],
-    },
-    values: {
-      heading: "Core values",
-      items: [
-        { name: "Instant", line: "Double-click a file and it opens almost immediately." },
-        { name: "Quiet", line: "The interface never draws more attention than the content." },
-        { name: "Native", line: "It behaves like a built-in macOS app." },
-        { name: "Beautiful", line: "Reading text is a pleasure in itself." },
-        { name: "Disposable", line: "There is almost nothing to configure or manage." },
       ],
     },
     features: {
@@ -257,16 +243,6 @@ export const content: Record<Lang, Content> = {
         },
       ],
     },
-    values: {
-      heading: "핵심 가치",
-      items: [
-        { name: "즉각적", line: "파일을 더블클릭하면 거의 즉시 열립니다." },
-        { name: "조용함", line: "인터페이스가 내용보다 더 눈에 띄지 않습니다." },
-        { name: "네이티브", line: "macOS 기본 앱처럼 동작합니다." },
-        { name: "아름다움", line: "텍스트를 읽는 것 자체가 즐거움입니다." },
-        { name: "부담 없음", line: "설정하거나 관리할 것이 거의 없습니다." },
-      ],
-    },
     features: {
       heading: "딱 필요한 만큼만.",
       items: [
@@ -385,16 +361,6 @@ export const content: Record<Lang, Content> = {
         },
       ],
     },
-    values: {
-      heading: "大切にしていること",
-      items: [
-        { name: "瞬時", line: "ファイルをダブルクリックすれば、ほぼ一瞬で開きます。" },
-        { name: "静けさ", line: "インターフェイスが内容より目立つことはありません。" },
-        { name: "ネイティブ", line: "macOS標準のアプリのように振る舞います。" },
-        { name: "美しさ", line: "テキストを読むこと自体が、心地よい時間になります。" },
-        { name: "身軽さ", line: "設定も管理も、ほとんど何もありません。" },
-      ],
-    },
     features: {
       heading: "必要なぶんだけ。",
       items: [
@@ -511,16 +477,6 @@ export const content: Record<Lang, Content> = {
           label: "任何语言",
           alt: "中日韩三种文字的诗句同在一个窗口——任何 Unicode 文本都能原样打开",
         },
-      ],
-    },
-    values: {
-      heading: "我们在意的",
-      items: [
-        { name: "即刻", line: "双击文件，几乎立刻打开。" },
-        { name: "安静", line: "界面永远不会比内容更显眼。" },
-        { name: "原生", line: "举手投足都像 macOS 自带的应用。" },
-        { name: "优美", line: "阅读文字本身就是一种享受。" },
-        { name: "轻盈", line: "几乎没有什么需要设置或管理。" },
       ],
     },
     features: {

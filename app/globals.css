@@ -353,41 +353,6 @@ section {
 
 /* ---- Values ---- */
 
-/* Five words under the screenshot, read like a caption. */
-.values {
-  margin-top: 3.5rem;
-  text-align: center;
-}
-
-.values-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.4rem 0;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  letter-spacing: -0.005em;
-  color: var(--fg-secondary);
-}
-
-.values-list li:not(:last-child)::after {
-  content: "·";
-  margin: 0 0.75rem;
-  color: var(--fg-tertiary);
-}
-
-/* Wraps to two lines on phones; drop the dots rather than dangle one. */
-@media (max-width: 640px) {
-  .values-list {
-    gap: 0.35rem 1.25rem;
-  }
-
-  .values-list li:not(:last-child)::after {
-    content: none;
-  }
-}
-
 /* ---- Features ---- */
 
 .features {
