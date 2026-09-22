@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
+import Analytics from "@/components/Analytics";
 import { SITE_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -33,7 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

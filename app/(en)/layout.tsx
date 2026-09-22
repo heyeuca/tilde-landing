@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "../globals.css";
+import Analytics from "@/components/Analytics";
 import { SITE_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body>
         <script dangerouslySetInnerHTML={{ __html: LANG_REDIRECT }} />
         {children}
+        <Analytics />
       </body>
     </html>
   );

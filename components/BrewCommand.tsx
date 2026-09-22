@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "@/lib/analytics";
 
 export default function BrewCommand({
   command,
@@ -20,6 +21,9 @@ export default function BrewCommand({
   }, [copied]);
 
   const copy = async () => {
+    // Report the intent, not the outcome: clipboard permission varies by
+    // browser and a denied write still means the visitor wanted the command.
+    track("copy_brew");
     try {
       await navigator.clipboard.writeText(command);
       setCopied(true);

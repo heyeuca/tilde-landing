@@ -3,6 +3,7 @@ import DownloadActions from "@/components/DownloadActions";
 import JsonLd from "@/components/JsonLd";
 import LangLink from "@/components/LangLink";
 import ShowcaseTabs from "@/components/ShowcaseTabs";
+import TrackedLink from "@/components/TrackedLink";
 import TildeMark from "@/components/TildeMark";
 import {
   APP_STORE_URL,
@@ -25,9 +26,14 @@ export default function Landing({ lang }: { lang: Lang }) {
           <TildeMark className="nav-tilde" />
           Tilde
         </a>
-        <a className="nav-link" href={GITHUB_URL}>
+        <TrackedLink
+          event="click_github"
+          location="nav"
+          className="nav-link"
+          href={GITHUB_URL}
+        >
           {t.nav.github}
-        </a>
+        </TrackedLink>
       </header>
 
       <main>
@@ -36,7 +42,7 @@ export default function Landing({ lang }: { lang: Lang }) {
           <h1>{t.hero.title}</h1>
           <p className="hero-subtitle">{t.hero.subtitle}</p>
           <div className="hero-actions">
-            <DownloadActions hero={t.hero} />
+            <DownloadActions hero={t.hero} location="hero" />
           </div>
           <p className="hero-fineprint">
             {t.hero.fineprint}
@@ -103,6 +109,7 @@ export default function Landing({ lang }: { lang: Lang }) {
           <div className="outro-actions">
             <DownloadActions
               hero={{ ...t.hero, download: t.outro.download }}
+              location="outro"
               primaryOnly
             />
           </div>
@@ -116,7 +123,9 @@ export default function Landing({ lang }: { lang: Lang }) {
           {t.footer.licenseSuffix}
         </p>
         <p className="footer-links">
-          <a href={GITHUB_URL}>{t.footer.github}</a>
+          <TrackedLink event="click_github" location="footer" href={GITHUB_URL}>
+            {t.footer.github}
+          </TrackedLink>
           {t.nav.otherLangs.map((l) => (
             <span key={l.hreflang}>
               <span aria-hidden="true"> · </span>

@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "tilde-static-out",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "-l", "3100", "out"],
+      "port": 3100
     }
   ]
 }

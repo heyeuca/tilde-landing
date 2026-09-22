@@ -7,6 +7,7 @@
     "build": "sh scripts/build.sh"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.25",
     "next": "^15.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

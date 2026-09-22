@@ -1,3 +1,4 @@
+import TrackedLink from "@/components/TrackedLink";
 import { APP_STORE_URL, DOWNLOAD_URL, type Content } from "@/lib/content";
 
 /**
@@ -9,29 +10,47 @@ import { APP_STORE_URL, DOWNLOAD_URL, type Content } from "@/lib/content";
  */
 export default function DownloadActions({
   hero,
+  location,
   primaryOnly = false,
 }: {
   hero: Content["hero"];
+  /** Reported with click events so hero and outro CTAs can be told apart. */
+  location: "hero" | "outro";
   /** Render just the leading CTA (used in the outro). */
   primaryOnly?: boolean;
 }) {
   if (!APP_STORE_URL) {
     return (
-      <a className="button button-primary" href={DOWNLOAD_URL}>
+      <TrackedLink
+        event="click_dmg"
+        location={location}
+        className="button button-primary"
+        href={DOWNLOAD_URL}
+      >
         {hero.download}
-      </a>
+      </TrackedLink>
     );
   }
 
   return (
     <>
-      <a className="button button-primary" href={APP_STORE_URL}>
+      <TrackedLink
+        event="click_app_store"
+        location={location}
+        className="button button-primary"
+        href={APP_STORE_URL}
+      >
         {hero.appStore}
-      </a>
+      </TrackedLink>
       {!primaryOnly && (
-        <a className="button button-secondary" href={DOWNLOAD_URL}>
+        <TrackedLink
+          event="click_dmg"
+          location={location}
+          className="button button-secondary"
+          href={DOWNLOAD_URL}
+        >
           {hero.download}
-        </a>
+        </TrackedLink>
       )}
     </>
   );
