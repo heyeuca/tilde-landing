@@ -8,7 +8,7 @@ export const RELEASES_URL = "https://github.com/heyeuca/Tilde/releases";
 // Empty until App Review approves the app; the hero shows the "coming soon"
 // note instead of the badge while this is blank. Fill in the
 // https://apps.apple.com/app/... URL from App Store Connect when live.
-export const APP_STORE_URL = "";
+export const APP_STORE_URL = "https://apps.apple.com/app/id6808973955";
 export const BREW_COMMAND = "brew install heyeuca/tap/tilde";
 export const LICENSE_URL = "https://github.com/heyeuca/Tilde/blob/main/LICENSE";
 
