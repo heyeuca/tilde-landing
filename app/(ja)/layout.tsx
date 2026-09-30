@@ -5,17 +5,17 @@ import { SITE_URL } from "@/lib/content";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Tilde — macOSのための小さくて美しいテキストエディタ",
+  title: "Tilde — 小さくて美しい、macOSのテキストエディタ",
   description:
-    "ファイルを開いて、読んで、必要なら一行直して、閉じる。プロジェクトもプラグインもサイドバーもない超軽量テキストエディタ。無料・オープンソース、macOS 14+。",
+    "ファイルを開いて、読んで、必要なら一行直して、閉じる。プロジェクトもプラグインもサイドバーもない超軽量テキストエディタ。無料のオープンソース、macOS 14+。",
   alternates: {
     canonical: "/ja/",
     languages: { "x-default": "/", en: "/", ko: "/ko/", ja: "/ja/", zh: "/zh/" },
   },
   openGraph: {
-    title: "Tilde — macOSのための小さくて美しいテキストエディタ",
+    title: "Tilde — 小さくて美しい、macOSのテキストエディタ",
     description:
-      "ファイルを開いて、読んで、必要なら一行直して、閉じる。無料・オープンソースのテキストエディタ。",
+      "ファイルを開いて、読んで、必要なら一行直して、閉じる。無料でオープンソースのテキストエディタ。",
     url: "/ja/",
     siteName: "Tilde",
     locale: "ja_JP",

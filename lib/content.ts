@@ -176,7 +176,7 @@ export const content: Record<Lang, Content> = {
         "No server uploads",
         "No account or sign-in",
         "No cloud storage",
-        "No analytics in the initial release",
+        "No analytics",
       ],
       closing: "Every document is processed locally, on your Mac.",
     },
@@ -201,9 +201,9 @@ export const content: Record<Lang, Content> = {
       ],
     },
     hero: {
-      title: "macOS를 위한 작고 아름다운 텍스트 에디터.",
+      title: "작고 아름다운 macOS 텍스트 에디터.",
       subtitle:
-        "파일을 열고, 읽고, 필요하면 한 줄 고치고, 닫는다. 프로젝트도, 플러그인도, 사이드바도 없이 — 에디터는 사라지고 내용만 남습니다.",
+        "파일을 열어 읽고, 필요하면 한 줄 고친 뒤 닫아요. 프로젝트도, 플러그인도, 사이드바도 없어요. 에디터는 드러나지 않고, 글만 남도록요.",
       download: ".dmg 다운로드",
       appStore: "App Store에서 받기",
       fineprint: "무료 오픈소스 · MIT License · macOS 14+",
@@ -218,27 +218,27 @@ export const content: Record<Lang, Content> = {
         {
           id: "md-ko",
           label: "Markdown",
-          alt: "Tilde 에디터로 연 Markdown 메모 — 제목 두 단계, 인용, 링크, 리스트, 구분선, 파이프 표, 코드 펜스까지 모든 기호가 흐리게 그대로 보임",
+          alt: "Tilde 에디터로 연 Markdown 메모. 제목, 인용문, 링크, 목록, 구분선, 표, 코드 블록까지 모든 기호가 흐리게 그대로 보여요",
         },
         {
           id: "reader-ko",
           label: "Reader",
-          alt: "같은 메모를 Reader 모드로 렌더링한 모습 — 인용 바, 링크, 구분선, 실제 표와 코드 블록까지, 에디터에서 단축키 하나 거리",
+          alt: "같은 메모를 Reader 모드로 본 모습. 인용 막대, 링크, 구분선, 표와 코드 블록이 읽기 전용으로 렌더링되고, 에디터에서 단축키 하나로 전환돼요",
         },
         {
           id: "yaml",
           label: "설정 파일",
-          alt: "Tilde에서 연 config.yaml: 키에만 살짝 색이 들어가고 나머지는 그대로, SF Mono",
+          alt: "Tilde에서 연 config.yaml. 키에만 살짝 색이 들어가고 나머지는 SF Mono 글꼴 그대로예요",
         },
         {
           id: "txt-ko",
-          label: "플레인 텍스트",
-          alt: "윤동주의 시 「서시」를 플레인 텍스트로 연 Tilde 창",
+          label: "일반 텍스트",
+          alt: "윤동주의 시 「서시」를 일반 텍스트로 연 Tilde 창",
         },
         {
           id: "cjk",
           label: "모든 언어",
-          alt: "일본어·한국어·중국어 시가 한 창에 담긴 메모 — 어떤 유니코드 텍스트든 자연스럽게 열립니다",
+          alt: "일본어·한국어·중국어 시가 한 창에 담긴 메모. 어떤 유니코드 텍스트든 자연스럽게 열려요",
         },
       ],
     },
@@ -247,31 +247,31 @@ export const content: Record<Lang, Content> = {
       items: [
         {
           title: "Markdown, 가볍게",
-          body: "제목은 크게, 굵은 글씨는 굵게 — 문법 기호는 그대로 보입니다. Markdown을 숨기는 게 아니라, 더 읽기 쉽게 만듭니다.",
+          body: "제목은 크게, 굵은 글씨는 굵게 보여 주면서도 문법 기호는 그대로 남겨 둬요. Markdown을 숨기지 않고, 더 읽기 쉽게 만들 뿐이에요.",
         },
         {
           title: "Reader 모드",
-          body: "⌘⇧R 한 번이면 표와 하이라이트된 코드 블록까지 완전히 렌더링된 읽기 전용 뷰. Safari의 Reader처럼 타이틀바에서 토글합니다.",
+          body: "⌘⇧R 한 번이면 문서 전체가 표와 하이라이트된 코드 블록까지 읽기 전용으로 렌더링돼요. Safari의 읽기 도우미처럼 제목 막대에서 켜고 끌 수 있어요.",
         },
         {
-          title: "어떤 평문이든",
-          body: ".txt와 .md는 물론 .json, .yaml, .toml, .xml, .csv, .log, .env 등 대부분의 UTF 기반 텍스트 파일이 열립니다 — 전부 평문 그대로.",
+          title: "일반 텍스트라면 무엇이든",
+          body: ".txt와 .md는 물론 .json, .yaml, .toml, .xml, .csv, .log, .env 등 대부분의 UTF 기반 텍스트 파일을 열 수 있어요. 모두 일반 텍스트 그대로 보여 줘요.",
         },
         {
           title: "조용한 하이라이팅",
-          body: ".json·.yaml·.toml에서는 키에만 살짝 색을 입힙니다. 나머지는 정확히 그대로 둡니다.",
+          body: ".json·.yaml·.toml에서는 키에만 살짝 색을 입혀요. 나머지는 손대지 않아요.",
         },
         {
           title: "파일 하나, 창 하나",
-          body: "진짜 문서 기반 macOS 앱. 다음으로 열기, 자동 저장, 버전, 최근 문서, 창 탭 — 전부 표준 그대로, 다시 만들지 않았습니다.",
+          body: "macOS 문서 기반 앱의 정석을 따라요. 다음으로 열기, 자동 저장, 버전, 최근 사용 항목, 창 탭까지 모두 macOS 표준 기능 그대로예요.",
         },
         {
           title: "빠르게, 그리고 조용히",
-          body: "빠르게 실행되고, 유휴 상태의 CPU 사용량은 사실상 0입니다. 백그라운드 작업도, 인덱싱도, 폴링도 없습니다.",
+          body: "빠르게 실행되고, 유휴 상태의 CPU 사용량은 사실상 0이에요. 백그라운드 작업도, 인덱싱도, 폴링도 전혀 없어요.",
         },
       ],
       also:
-        "그리고: 실행 취소, 찾기 및 바꾸기, 맞춤법 검사, 드래그 앤 드롭, 자동 줄 바꿈, 선택적 줄 번호, 시스템을 따르는 라이트와 다크.",
+        "그 밖에도: 실행 취소, 찾기 및 바꾸기, 맞춤법 검사, 드래그 앤 드롭, 자동 줄 바꿈, 켜고 끌 수 있는 줄 번호, 시스템 설정을 따르는 라이트·다크 모드.",
     },
     nonGoals: {
       heading: "Tilde가 하지 않는 것.",
@@ -286,26 +286,26 @@ export const content: Record<Lang, Content> = {
         "AI 없음.",
       ],
       closing:
-        "Tilde는 더 작은 IDE가 아닙니다. 그런 기능이 필요하다면, Tilde는 — 의도적으로 — 맞지 않는 도구입니다.",
+        "Tilde는 IDE의 축소판이 아니에요. 그런 기능이 필요하다면 Tilde는 맞지 않는 도구이고, 일부러 그렇게 만들었어요.",
     },
     privacy: {
-      heading: "당신의 텍스트는 당신의 것.",
+      heading: "내 텍스트는 오롯이 내 것.",
       items: [
         "서버 업로드 없음",
         "계정 및 로그인 없음",
         "클라우드 저장소 없음",
-        "초기 릴리스에 분석 없음",
+        "사용 통계 수집 없음",
       ],
-      closing: "모든 문서는 당신의 Mac에서, 로컬로 처리됩니다.",
+      closing: "모든 문서는 이 Mac 안에서만 처리돼요.",
     },
     outro: {
-      line: "그냥 파일을 여세요.",
+      line: "그냥, 파일을 여세요.",
       download: ".dmg 다운로드",
     },
     footer: {
       license: "Tilde는",
       licenseName: "MIT License",
-      licenseSuffix: "로 배포되는 무료 오픈소스 소프트웨어입니다.",
+      licenseSuffix: "로 배포되는 무료 오픈소스 소프트웨어예요.",
       github: "GitHub",
     },
   },
@@ -319,12 +319,13 @@ export const content: Record<Lang, Content> = {
       ],
     },
     hero: {
-      title: "macOSのための、小さくて美しいテキストエディタ。",
+      // U+200B marks where the headline may wrap (see .hero h1:lang(ja)).
+      title: "小さくて美しい、\u200BmacOSの\u200Bテキストエディタ。",
       subtitle:
-        "ファイルを開く。読む。必要なら一行だけ直して、閉じる。プロジェクトも、プラグインも、サイドバーもなし — エディタは消えて、内容だけが残ります。",
+        "ファイルを開く。読む。必要なら一行だけ直して、閉じる。プロジェクトも、プラグインも、サイドバーもない。エディタは前に出ず、文章だけが残るように。",
       download: ".dmgをダウンロード",
       appStore: "App Storeで入手",
-      fineprint: "無料・オープンソース · MIT License · macOS 14+",
+      fineprint: "無料のオープンソース · MIT License · macOS 14+",
       appStoreNote: "App Storeにも近日登場",
       copy: "コピー",
       copied: "コピーしました",
@@ -336,17 +337,17 @@ export const content: Record<Lang, Content> = {
         {
           id: "md-ja",
           label: "Markdown",
-          alt: "Tildeのエディタで開いたMarkdownノート — 見出し、引用、リンク、リスト、区切り線、表、コードフェンスの記号が薄いまま全部見える",
+          alt: "Tildeのエディタで開いたMarkdownノート。見出し、引用、リンク、リスト、区切り線、表、コードブロックの記号もすべて薄く表示されている",
         },
         {
           id: "reader-ja",
           label: "Reader",
-          alt: "同じノートをReaderモードで読み取り専用レンダリング — 引用バー、リンク、区切り線、本物の表とコードブロック。エディタからショートカットひとつ",
+          alt: "同じノートをReaderモードで表示したところ。引用バー、リンク、区切り線、表、コードブロックが読み取り専用できちんと描画される。エディタからショートカットひとつで切り替え",
         },
         {
           id: "yaml",
           label: "設定ファイル",
-          alt: "Tildeで開いたconfig.yaml — キーにだけそっと色がつき、ほかはそのまま。SF Mono",
+          alt: "Tildeで開いたconfig.yaml。キーにだけそっと色がつき、ほかはSF Monoのプレーンな表示のまま",
         },
         {
           id: "txt-ja",
@@ -356,7 +357,7 @@ export const content: Record<Lang, Content> = {
         {
           id: "cjk",
           label: "あらゆる言語",
-          alt: "中国語・日本語・韓国語の詩がひとつのウインドウに並ぶノート — どんなUnicodeテキストもそのまま開けます",
+          alt: "中国語・日本語・韓国語の詩がひとつのウインドウに並ぶノート。どんなUnicodeテキストもそのまま開ける",
         },
       ],
     },
@@ -365,31 +366,31 @@ export const content: Record<Lang, Content> = {
       items: [
         {
           title: "Markdown、ひかえめに",
-          body: "見出しは大きく、太字は太く — 記法はそのまま見えます。TildeはMarkdownを隠さず、読みやすくします。",
+          body: "見出しは大きく、太字は太く表示しつつ、記法の記号はそのまま残します。TildeはMarkdownを隠さず、読みやすくするだけです。",
         },
         {
           title: "Readerモード",
-          body: "⌘⇧R ひとつで、表もハイライトされたコードブロックも含めて文書全体を読み取り専用でレンダリング。Safariのリーダーのように、タイトルバーから切り替えられます。",
+          body: "⌘⇧R ひとつで、表もハイライトされたコードブロックも含めて書類全体を読み取り専用で表示します。Safariのリーダーのように、タイトルバーから切り替えられます。",
         },
         {
-          title: "どんなプレーンテキストも",
-          body: ".txtと.mdはもちろん、.json、.yaml、.toml、.xml、.csv、.log、.envなど、ほとんどのUTFテキストファイルが開けます — すべてプレーンテキストのまま。",
+          title: "プレーンテキストなら何でも",
+          body: ".txtと.mdはもちろん、.json、.yaml、.toml、.xml、.csv、.log、.envなど、ほとんどのUTFテキストファイルが開けます。どれもプレーンテキストのまま表示します。",
         },
         {
           title: "静かなハイライト",
           body: ".json・.yaml・.tomlでは、キーにだけそっと色がつきます。ほかには何もしません。",
         },
         {
-          title: "1ファイル、1ウインドウ",
-          body: "本物の書類ベースのMacアプリ。「このアプリケーションで開く」、自動保存、バージョン、最近使った書類、ウインドウタブ — すべて標準のまま、作り直していません。",
+          title: "ファイルひとつ、ウインドウひとつ",
+          body: "Macの書類ベースアプリの作法どおりに作っています。「このアプリケーションで開く」、自動保存、バージョン、最近使った項目、ウインドウタブ。すべてmacOS標準のままで、車輪の再発明はしていません。",
         },
         {
           title: "速く、そして静かに",
-          body: "起動は速く、待機中のCPU使用は実質ゼロ。バックグラウンド処理も、インデックス作成も、ポーリングもありません。",
+          body: "起動は速く、待機中のCPU使用率は実質ゼロ。バックグラウンド処理も、インデックス作成も、ポーリングも一切ありません。",
         },
       ],
       also:
-        "そのほか: 取り消す、検索と置換、スペルチェック、ドラッグ&ドロップ、行の折り返し、必要なときだけの行番号、システムに合わせたライトとダーク。",
+        "そのほか：取り消し、検索と置換、スペルチェック、ドラッグ＆ドロップ、行の折り返し、表示を切り替えられる行番号、システムに連動するライト／ダークモード。",
     },
     nonGoals: {
       heading: "Tildeがしないこと。",
@@ -404,7 +405,7 @@ export const content: Record<Lang, Content> = {
         "AIなし。",
       ],
       closing:
-        "Tildeは小さなIDEではありません。それらが必要なら、Tildeは — あえて — 合わない道具です。",
+        "TildeはIDEの縮小版ではありません。そうした機能が必要なら、Tildeは向いていません。あえて、そう作っています。",
     },
     privacy: {
       heading: "あなたのテキストは、あなたのもの。",
@@ -412,12 +413,12 @@ export const content: Record<Lang, Content> = {
         "サーバーへのアップロードなし",
         "アカウント・サインインなし",
         "クラウドストレージなし",
-        "初期リリースでは解析なし",
+        "利用状況の収集なし",
       ],
-      closing: "すべての書類は、あなたのMacの中でローカルに処理されます。",
+      closing: "すべての書類は、お使いのMacの中だけで処理されます。",
     },
     outro: {
-      line: "ただ、ファイルを開くだけ。",
+      line: "ファイルを開く、それだけ。",
       download: ".dmgをダウンロード",
     },
     footer: {
@@ -439,7 +440,7 @@ export const content: Record<Lang, Content> = {
     hero: {
       title: "一款小而美的 macOS 文本编辑器。",
       subtitle:
-        "打开文件。读一读。需要的话改一行，然后关掉。没有项目，没有插件，没有边栏——编辑器隐去，只留下内容。",
+        "打开文件。读一读。需要的话改一行，然后关掉。没有项目，没有插件，没有边栏。编辑器退到幕后，只留下文字。",
       download: "下载 .dmg",
       appStore: "在 App Store 获取",
       fineprint: "免费开源 · MIT License · macOS 14+",
@@ -459,17 +460,17 @@ export const content: Record<Lang, Content> = {
         {
           id: "reader-zh",
           label: "阅读模式",
-          alt: "同一篇笔记的阅读模式：引用线、链接、分隔线、真正的表格与代码块——距编辑器只有一个快捷键",
+          alt: "同一篇笔记的阅读模式：引用线、链接、分隔线、表格与代码块都完整渲染为只读，按一个快捷键即可与编辑器切换",
         },
         {
           id: "yaml",
           label: "配置文件",
-          alt: "在 Tilde 中打开的 config.yaml——只有键被轻轻着色，其余保持原样。SF Mono",
+          alt: "在 Tilde 中打开的 config.yaml——只有键带上淡淡的颜色，其余保持原样，字体为 SF Mono",
         },
         {
           id: "txt-zh",
           label: "纯文本",
-          alt: "以纯文本打开的陶渊明《饮酒·其五》",
+          alt: "在 Tilde 中以纯文本打开的陶渊明《饮酒·其五》",
         },
         {
           id: "cjk",
@@ -487,7 +488,7 @@ export const content: Record<Lang, Content> = {
         },
         {
           title: "阅读模式",
-          body: "只需一个快捷键（⌘⇧R），就能把整篇文档渲染为只读，表格和高亮的代码块也包括在内。像 Safari 的阅读器一样，从标题栏切换。",
+          body: "按下 ⌘⇧R，整篇文稿连同表格和高亮代码块都会渲染为只读视图。像 Safari 的阅读器一样，从标题栏切换。",
         },
         {
           title: "任何纯文本",
@@ -495,19 +496,19 @@ export const content: Record<Lang, Content> = {
         },
         {
           title: "安静的高亮",
-          body: "在 .json、.yaml、.toml 中，只有键会被轻轻着色。其余一概不动。",
+          body: "在 .json、.yaml、.toml 中，只有键带上淡淡的颜色。其余一概不动。",
         },
         {
           title: "一个文件，一个窗口",
-          body: "真正的文稿型 Mac 应用：打开方式、自动存储、版本、最近使用的文稿、窗口标签页——全部遵循系统标准，绝不重造。",
+          body: "遵循 Mac 文稿型应用的规范：打开方式、自动存储、版本、最近使用的文稿、窗口标签页，全部沿用系统标准，不重复造轮子。",
         },
         {
-          title: "快，然后安静",
+          title: "又快，又安静",
           body: "启动飞快，闲置时 CPU 占用几乎为零。没有后台任务，没有索引，没有轮询。",
         },
       ],
       also:
-        "此外：撤销、查找与替换、拼写检查、拖放、自动换行、可选的行号，以及跟随系统的浅色与深色。",
+        "此外：撤销、查找与替换、拼写检查、拖放、自动换行、可开关的行号，以及跟随系统切换的浅色/深色外观。",
     },
     nonGoals: {
       heading: "Tilde 不做的事。",
@@ -522,19 +523,19 @@ export const content: Record<Lang, Content> = {
         "没有 AI。",
       ],
       closing:
-        "Tilde 不是缩小版的 IDE。如果你需要那些功能，Tilde 并不是合适的工具——而这正是有意为之。",
+        "Tilde 不是缩小版的 IDE。如果你需要这些功能，Tilde 并不是合适的工具——而这正是有意为之。",
     },
     privacy: {
       heading: "你的文字，只属于你。",
-      items: ["不上传至服务器", "无账户、无登录", "无云端存储", "首个版本不含数据分析"],
-      closing: "每一份文稿都只在你的 Mac 上本地处理。",
+      items: ["不上传至服务器", "无账户、无登录", "无云端存储", "不收集使用数据"],
+      closing: "每一份文稿都只在你的 Mac 上处理。",
     },
     outro: {
       line: "打开文件，就好。",
       download: "下载 .dmg",
     },
     footer: {
-      license: "Tilde 是基于",
+      license: "Tilde 是以",
       licenseName: "MIT License",
       licenseSuffix: " 发布的免费开源软件。",
       github: "GitHub",

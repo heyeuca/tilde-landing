@@ -18,7 +18,7 @@ export default function GlobalNotFound() {
         <main className="notfound">
           <TildeMark className="notfound-mark" />
           <h1>Page not found.</h1>
-          <p lang="ko">페이지를 찾을 수 없습니다.</p>
+          <p lang="ko">페이지를 찾을 수 없어요.</p>
           <p lang="ja">ページが見つかりません。</p>
           <p lang="zh-Hans">找不到页面。</p>
           <p className="notfound-link">

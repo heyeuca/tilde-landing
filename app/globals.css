@@ -59,6 +59,13 @@ body {
   overflow-wrap: break-word;
 }
 
+/* Japanese headline: wrap only at the phrase breaks marked with U+200B in
+   the copy (and after punctuation), so no line starts with a particle. */
+.hero h1:lang(ja) {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 ::selection {
   background: var(--fg);
   color: var(--bg);
